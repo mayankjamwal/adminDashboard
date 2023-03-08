@@ -5,6 +5,10 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    text-align: center;
+}
+
 hr {
     width: 90%;
     margin: 0 auto;
@@ -178,8 +182,28 @@ hr {
 
 }
 */
-html{
+/*html{
     scroll-behavior: smooth;
+    color: white;
+}
+
+body>div.background-img{
+    background-image: linear-gradient(
+  45deg,
+  hsl(0deg 0% 1%) 0%,
+  hsl(344deg 0% 3%) 8%,
+  hsl(344deg 0% 4%) 17%,
+  hsl(0deg 0% 6%) 25%,
+  hsl(0deg 1% 8%) 33%,
+  hsl(0deg 1% 10%) 42%,
+  hsl(0deg 2% 12%) 50%,
+  hsl(0deg 1% 19%) 58%,
+  hsl(0deg 0% 27%) 67%,
+  hsl(0deg 0% 34%) 75%,
+  hsl(344deg 0% 40%) 83%,
+  hsl(344deg 0% 45%) 92%,
+  hsl(0deg 0% 51%) 100%
+);
 }
 
 .navbar{
@@ -189,7 +213,7 @@ html{
     top: 0;
     z-index: 1;
     font-size: 1.2rem;
-    background-color: chocolate;
+    opacity: 1;
 }
 .container-navbar.left{
     display: flex;
@@ -231,14 +255,19 @@ html{
     list-style-type:none ;
     align-items: center;
     margin:1rem;
+    z-index: 1;
 }
 .navbar-links ul li a{
     text-decoration: none;
     text-transform: uppercase;
     padding: 1rem;
-    color:#333;
-    
+    color: white;
 }
+
+.navbar-links ul li a:hover{
+    text-shadow: 0.15px 0.25px #fff;
+}
+
 .container-section {
     font-size: 1rem;
     font-family: Arial, Helvetica, sans-serif;
@@ -249,6 +278,57 @@ html{
 section:nth-of-type(even){
     background-color: red;
 }
-section:nth-of-type(odd){
-    background-color: yellowgreen;
+
+
+.main-container.section-one.div-section {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+    height: 100vh;
+    justify-content:space-around;
 }
+.section-one{
+  color: white;
+}
+
+.section-one header{
+    font-size: 1rem;
+    margin-top: 30rem;
+}
+.section-one header h1{
+    font-size: 2.5rem;
+    font-weight: bolder;
+}
+.section-one header h4{
+    margin-top: 2rem;
+}
+.button-header{
+    display:flex;
+    justify-content: center;
+    gap: 2rem;
+}
+.button-header button:hover{
+    cursor: pointer;
+}
+.button-header button{
+    padding: 0.7rem 1.4rem;
+    margin-top: 3rem;
+    font-size: 1.5rem;
+    color: white;
+    border-radius: 14px;
+    border:none;
+    background-color: white;
+    font-weight: 600; 
+}
+.button-header button.viewDemo{
+    background-color: royalblue;
+}
+.button-header button.documentation{
+    color: #333;
+}
+
+.main-container.section-one.div-section article img {
+    width: 70%;
+    height:100%;
+}
+*/
