@@ -1,17 +1,13 @@
-
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
     font-family: 'AsapRegular',Arial, Helvetica, sans-serif;
 }
+html{
+    scroll-behavior: smooth;
+}
 
-/* hr{
-    margin: auto;
-    margin-top:10px;
-    border: 0.2px solid #ddd;
-    width: 1%; 
-} */
 
 .container{
     display: grid;
@@ -27,10 +23,11 @@ header{
     position: sticky;
     top:0;
     z-index: 2;
+    padding: 20px;
 }
 .navbar>.logo-img{
     color:white;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
 }
 
 .navbar{
@@ -56,14 +53,14 @@ header{
 .navbar-list li{
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
-    padding: 5px;
+    font-size: 1.3rem;
+    padding: 10px;
     letter-spacing: 0.8px;
 }
 .navbar-list li a{
     color: white;
     text-decoration: none;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     padding: 5px;
     letter-spacing: 0.8px;
     transition: color 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -72,9 +69,9 @@ header{
     color:royalblue;
 }
 .navbar-list li button{
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     color:black;
-    padding: 8px;
+    padding: 10px;
     border-radius: 4px;
     border:none;
     box-shadow: 2px 4px 10px black;
@@ -168,24 +165,25 @@ header{
     color: black;
 }
 
+
 /*section 2 starts here */
 .section-container.section-2{
+    position: relative;
     display:flex;
     flex-direction: column;
-    margin-top:500px;
-    margin-bottom: 250px;
+    margin-top: 400px;
     
 }
 
 .img-section-2-container{
     width:100%;
     position: absolute;
-    top: 500px;
+    top: -600px;
 }
 .img-section-2-container .img-replacer{
-    width: 70%;
-    height:400px;
     min-width: 300px;
+    width: 50%;
+    height:400px;  
     background-color: #333;
     text-align: center;
     margin: 50px auto;
@@ -193,6 +191,7 @@ header{
 
 .section-2-tags-container{
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-evenly;
     width:100%;
@@ -201,8 +200,9 @@ header{
 }
 
 .tag{
-    width: 120px;
-    height: 120px;
+    padding: 5px;
+    width: 170px;
+    margin: 10px;
     background-color: white;
     border: none;
     border-radius: 10px;
@@ -216,7 +216,10 @@ header{
     font-size: medium;
     text-align: center;
     margin:0 auto;
+    padding:12px 12px;
     line-height: 1.2rem;
+    font-size: 1.5rem;
+
 }
 
 .section-2 h2{
@@ -255,12 +258,12 @@ header{
 .demo-heading2{
     color:rgb(101, 211, 119);
     margin-top:10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
 }
 .demo-heading1{
     color:#42cccc;
     margin-top: 10px;
-    font-size: 1.5rem;
+    font-size:2rem;
 }
 
 /* .demo img{
@@ -270,7 +273,7 @@ header{
 
 .demo .action-btn-section-2 button{
     padding: 7px 15px;
-    font-size: 1.1rem;
+    font-size: 1.7rem;
     border-radius: 4px;
     border: none;
     background-color: #333;
@@ -289,27 +292,31 @@ header{
 /* Section 4 starts here*/
 
 .section-container.section-4{
+    margin-top: 100px;
+    position: static;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: 20px;
+    gap: 40px;
     margin-top: 50px;
     z-index: 1;
+    margin-top: 200px;
 }
 .section-4-grp{
     display: flex;
+    position: relative;
+    margin-top: 400px;
     flex-wrap: wrap;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    gap: 20px;
+    gap: 40px;
 }
-.section-4-grp h3{
+.section-4-grp>h3{
     font-size: 2.5rem;
-    margin-top: 180px;
 }
 .section-4-grp p{
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #555;
     text-align: center;  
     max-width: 70%;
@@ -322,9 +329,12 @@ header{
     row-gap: 30px;
     column-gap: 30px;
     margin: 10px;
+    justify-items: start;
 }
 .section-4-grid-grp .grid-grp{
     column-gap: 10px;
+    justify-content: start;
+    align-items:start;
     padding: 30px 50px 50px 50px;
     display: grid;
     border-radius: 10px;
@@ -343,6 +353,8 @@ h4{
 }
 p{
     grid-area: para;
+    font-size: 1.3rem;
+    line-height: 1.8rem;
 }
 
 .grid-grp.one,.grid-grp.five,.grid-grp.nine{
@@ -372,9 +384,13 @@ p{
 }
 
 /*Section 5 starts here */
-
+.section-container.section-5{
+    position: static;
+    margin-top: 270px;
+}
 .section-5-container{
-    margin-top:450px;
+    position: relative;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -387,17 +403,15 @@ p{
     align-items: center;
     gap: 20px;
 }
-.section-5-grp h3,p{
-    text-align: center;
-}
+
 h3{
     font-size: 2.5rem;
-    margin-top: -5rem;
 }
 .section-5-para{
     font-size: 1.5rem;
     max-width: 70%;
     color: #555;
+    text-align: center;
 }
 
 .section-5-img-container img{
@@ -454,10 +468,12 @@ h3{
   }
 
 .section-6{
-    position:relative;
-    margin-top:700px;
+    position:static;
+    margin-top:200px;
 }
 .container-section-6{
+    position: relative;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -474,7 +490,7 @@ h3{
 .container-6-grp p{
     text-align: center;
     width: 80%;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     color: #555;
 } 
 .container-section-6 img{
@@ -524,4 +540,59 @@ h3{
     color: white;
     font-size: 2rem;
     padding: 16px 32px;
+  }
+
+  /*Section 7 starts here*/
+  .section-container.section-7{
+    position: static;
+    margin-top: 200px;
+  }
+  .section-7-container{
+    position: relative;
+    margin-top: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    justify-content: center;
+    align-items: center;
+  }
+  .container-7-grp{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+ 
+  .container-7-grp p{
+    max-width: 70%;
+    color: #555;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+
+  .container-7-comp{
+    display: grid;
+    grid-template-columns: repeat(6,auto);
+    column-gap: 20px;
+    row-gap: 20px;
+  }
+
+  .components{
+    margin: 5px;
+    padding: 25px 40px;
+    border: 0.7px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .components p{
+    font-size: 1.4rem;
+    color: #333;
+  }
+  .components:hover{
+    cursor:default;
+    box-shadow: 0.1px 0.1px 1px #555;
   }
