@@ -22,7 +22,7 @@ header{
     background-color: black;
     position: sticky;
     top:0;
-    z-index: 2;
+    z-index: 99;
     padding: 20px;
 }
 .navbar>.logo-img{
@@ -71,7 +71,7 @@ header{
 .navbar-list li button{
     font-size: 1.3rem;
     color:black;
-    padding: 10px;
+    padding: 15px 25px;
     border-radius: 4px;
     border:none;
     box-shadow: 2px 4px 10px black;
@@ -79,7 +79,7 @@ header{
 }
 .navbar-list li button:hover{
     cursor: pointer;
-    background-color:#333;
+    background-color:royalblue;
     color:white;
 }
 
@@ -178,17 +178,19 @@ header{
 .img-section-2-container{
     width:100%;
     position: absolute;
-    top: -600px;
+    top: -650px;
+    z-index: 1;
 }
+
 .img-section-2-container .img-replacer{
     min-width: 300px;
-    width: 50%;
-    height:400px;  
-    background-color: #333;
+    width: 70%;  
     text-align: center;
     margin: 50px auto;
 }
-
+.img-replacer img{
+    width: inherit;
+}
 .section-2-tags-container{
     display: flex;
     flex-direction: row;
@@ -219,6 +221,7 @@ header{
     padding:12px 12px;
     line-height: 1.2rem;
     font-size: 1.5rem;
+    color: #333;
 
 }
 
@@ -294,12 +297,12 @@ header{
 .section-container.section-4{
     margin-top: 100px;
     position: static;
+    z-index: 2;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 40px;
     margin-top: 50px;
-    z-index: 1;
     margin-top: 200px;
 }
 .section-4-grp{
@@ -358,10 +361,10 @@ p{
 }
 
 .grid-grp.one,.grid-grp.five,.grid-grp.nine{
-    background-color: #ddd;
+    background-color: #eeeeeeda;
 }
 .grid-grp.two,.grid-grp.six,.grid-grp.eight{
-    background-color: #333333e7;
+    background-color: #333;
     color: white;
 }
 .grid-grp.three,.grid-grp.seven,.grid-grp.eleven{
@@ -395,6 +398,7 @@ p{
     flex-direction: column;
     justify-content: center;
     gap: 40px;
+    z-index: 3;
 }
 .section-5-grp{
     display: flex;
@@ -479,6 +483,7 @@ h3{
     justify-content: center;
     align-items: center;
     gap: 40px;
+    z-index: 4;
 }
 .container-6-grp{
     display: flex;
@@ -555,6 +560,7 @@ h3{
     gap: 40px;
     justify-content: center;
     align-items: center;
+    z-index: 5;
   }
   .container-7-grp{
     display: flex;
@@ -576,6 +582,7 @@ h3{
     grid-template-columns: repeat(6,auto);
     column-gap: 40px;
     row-gap: 40px;
+    position: relative;
   }
 
   .components{
@@ -598,3 +605,319 @@ h3{
     cursor:default;
     box-shadow: 0.1px 0.1px 1px #555;
   }
+
+  /* Section 8 starts here */
+
+.section-container.section-8{
+    margin-top: 200px;
+    position: static;
+}  
+.section-8-div{
+    margin-top:300px;
+    position: relative;
+    z-index: 4;
+    display: grid;
+    grid-template-areas: 
+    "sec1 sec2 sec2 sec2 sec2"
+    "sec1 sec3 sec3 sec4 sec4"
+    "sec1 sec3 sec3 sec4 sec4";
+    column-gap: 10px;
+    row-gap: 20px;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding: 40px;
+}
+.sec-8-cont-1{
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width:300px; 
+    grid-area:sec1;
+    background-color:royalblue;
+    padding: 30px 40px 0px 40px;
+    gap:30px;
+    border-radius: 20px;    
+}
+.sec-8-cont-1 img{
+    margin-top:40px;
+    width: 100%;
+}
+.sec-8-cont-1 h3,.sec-8-cont-1 p{
+    word-wrap: break-word;
+    color: white;
+}
+.sec-8-cont-1 h3{
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+
+.sec-8-cont-1 p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.sec-8-cont-2{
+    grid-area:sec2;
+    height: 5rem;
+}
+.sec-8-cont-2 h3{
+    font-size: 3.5rem;
+    font-weight: 100;
+}
+.sec-8-cont-2 .block{
+    display: block;
+    font-weight: 100;
+}
+.sec-8-cont-3,.sec-8-cont-4{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    width: 600px;
+    min-width: 400px;
+    grid-area:sec3;
+    background-color: rgba(65, 105, 225, 0.205);
+    border-radius: 20px;
+    padding: 30px 40px 0px 40px;
+    gap:40px;
+}
+.sec-8-cont-3 h3,.sec-8-cont-4 h3{
+    font-size: 2.7rem;
+}
+.sec-8-cont-3 p,.sec-8-cont-4 p{
+    color: black;
+    word-spacing: 2px;
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 0.5px;
+}
+.sec-8-cont-3 ul,.sec-8-cont-4 ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    list-style-type: square;
+    list-style-position: inside;
+    list-style-image: url(./images/ok.png);
+}
+.sec-8-cont-3 ul .cross, .sec-8-cont-4 ul .cross{
+    list-style-image: url(./images/cross-mark\ \(1\).png);
+}
+.sec-8-cont-3 ul li span, .sec-8-cont-4 ul li span{
+    margin-left: 40px;
+}
+
+.sec-8-cont-3 li,.sec-8-cont-4 li{
+    font-size: 1.5rem;
+    margin-right: 10px;
+}
+.sec-8-cont-3 .block,.sec-8-cont-4 .block{
+    font-size: 2rem;
+    display: block;
+    font-weight: 100;
+    color: #333;
+}
+.sec-8-cont-3 button,.sec-8-cont-4 button{
+    align-self: center;
+    padding: 15px 60px;
+    font-size: 1.5rem;
+    border:0.5px solid black;
+    border-radius: 10px;
+    box-shadow: 0.2px 0.1px 2px #333;
+    color:rgb(1, 1, 41);
+    transition: background-color,color,box-shadow 0.4s ease-in-out;
+}
+.sec-8-cont-3 button{
+    margin-top:20px;
+}
+
+.sec-8-cont-3 button:hover,.sec-8-cont-4 button:hover{
+    box-shadow: 0.2px 0.1px 5px #333;
+    background-color: rgb(1, 1, 41);
+    color: white;
+    cursor: pointer;
+}
+
+.sec-8-cont-4{
+    grid-area:sec4;
+    background-color: royalblue;
+    color:white;
+}
+.sec-8-cont-4 .block{
+    color: #ddd;
+}
+.sec-8-cont-4 p{
+    color: white;
+}
+.sec-8-cont-1 .sec-8-head{
+    font-weight:700;
+    font-size: 3.8rem;
+}
+.sec-8-cont-2 .sec-8-head{
+    font-weight:700;
+    font-size: 3.8rem;
+}
+
+/* Section 9 starts */
+
+.section-container.section-9{
+    margin-top: 400px;
+    position: relative;
+    z-index: 6;
+}
+.sec-9-container{
+    margin-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 30px;
+}
+.sec-9-support, .sec-9-contact{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    background-color: rgba(65, 105, 225, 0.205);
+    font-size: 2rem;
+    margin: 20px 60px;
+    padding: 100px 90px;
+    gap: 50px;
+    border-radius: 20px;
+    align-items: flex-start;
+   
+}
+
+.sec-9-support h3{
+    font-size: 2rem;
+    font-weight: 100;
+    color: #333;
+}
+.sec-9-support p,.sec-9-contact p{
+    font-size: 1.2rem;
+    color: #555;
+}
+.sec-9-contact{
+    padding: 98px 70px;
+    justify-content: flex-start;
+}
+.sec-9-tags{
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    
+}
+.sec-9-tag{
+    border: 0.5px solid #bbb;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #333;
+}
+
+.sec-9-support button{
+    font-size: 1.5rem;
+    padding: 20px 30px;
+    border-radius: 10px;
+    background-color: rgb(1, 1, 41);
+    color: #eee;
+}
+.sec-9-contact .userinput{
+    display: flex;
+    justify-content: flex-start;
+}
+.sec-9-contact .userinput input{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    border: none;
+    border-radius: 10px 0px 0px 10px;
+}
+.sec-9-contact .userinput button{
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: rgb(1, 1, 41);
+    color: #eee;
+}
+.sec-9-contact .userinput input{
+    font-size: 1.3rem;
+    padding: 20px 30px;
+}
+.sec-9-support button:hover, .sec-9-contact button:hover{
+    cursor: pointer;
+    color: white;
+}
+
+/* Section 10 starts here */
+.section-container.section-10{
+    position: static;
+    background: linear-gradient(45deg,
+    hsl(239deg 92% 60%) 0%,
+    hsl(241deg 66% 51%) 4%,
+    hsl(242deg 66% 42%) 9%,
+    hsl(243deg 70% 34%) 17%,
+    hsl(244deg 77% 26%) 25%,
+    hsl(244deg 87% 18%) 36%,
+    hsl(230deg 100% 15%) 48%,
+    hsl(227deg 100% 12%) 61%,
+    hsl(226deg 100% 8%) 75%,
+    hsl(225deg 100% 5%) 89%,
+    hsl(220deg 100% 1%) 100%);
+}
+footer{
+    margin-top: 250px;
+    text-align: center;
+    font-size: 2rem;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:50px;
+}
+footer h2{
+    text-shadow: 0.1px 0.5px 0.5px white;
+    margin-left: -30px;
+}
+
+footer h2>span{
+    color:royalblue;
+    text-shadow: 0.1px 0.1px 1.5px royalblue;
+}
+footer p{
+    text-align: center;
+    max-width: 80ch;
+    font-size: 1.5rem;
+    text-shadow: 0.1px 0.2px 0.5px white;
+    line-height: 2.4rem;
+    word-spacing: 0.1rem;
+
+}
+footer .button{
+    display: flex;
+    justify-content: center;
+    gap:40px;
+}
+footer .button button{
+    font-size:1.5rem;
+    word-spacing: 0.2rem;
+    padding: 20px 30px;
+    border-radius: 10px;
+    border:none;
+    box-shadow: 0.1px 0.2px 2px rgb(2, 2, 66);
+    color: #333;
+    transition: background-color, color 0.4s ease-in-out;
+
+}
+footer .button button:hover{
+    cursor: pointer;
+    background-color: rgb(2, 2, 66);
+    color: white;
+
+}
+footer .footer-para{
+    font-size: 1.8rem;
+}
+
+.footer-para .block{
+    display: block;
+}
+.footer-para .heart{
+    color:rgba(214, 17, 17, 0.904);
+}
