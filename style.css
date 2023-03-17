@@ -37,6 +37,12 @@ header{
     padding: 20px;
 
 }
+.navbar-list-btn{
+    display:flex;
+    justify-content: space-between;
+    gap: 30px;
+    align-items: center;
+}
 .navbar-list{
     list-style-type: none;
     display: flex;
@@ -68,7 +74,7 @@ header{
 .navbar-list li a:hover{
     color:royalblue;
 }
-.navbar-list li button{
+.navbar-list-btn button{
     font-size: 1.3rem;
     color:black;
     padding: 15px 25px;
@@ -77,10 +83,68 @@ header{
     box-shadow: 2px 4px 10px black;
     transition: background-color, color 0.4s ease;
 }
-.navbar-list li button:hover{
+.navbar-list-btn button:hover{
     cursor: pointer;
     background-color:royalblue;
     color:white;
+}
+.navbar-list-btn .hamburger{
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+
+}
+
+@media(max-width: 440px){
+    .navbar{
+        display: flex;
+        justify-content: space-between;
+    }
+    .navbar-list-btn{
+        display: flex;
+    }   
+    .navbar-list-btn button{
+        order: 0;
+        padding: 7px 13px;
+    }
+    .navbar-list{
+        position: fixed;
+        left: -100%;
+        top: 110px;
+        gap: 0;
+        flex-direction: column;
+        background-color: black;
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;  
+    }
+    .navbar-list-btn .hamburger{
+        display: block;    
+    }
+    .hamburger.active .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    .hamburger.active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    .navbar-list.active .nav-item{
+        margin-bottom: 16px ;
+    }
+    .navbar-list.active{
+        left:0;
+    }
 }
 
 .main-container{
@@ -100,6 +164,8 @@ header{
     text-align: center;
     gap:20px;  
 }
+
+
 .section-1{
     background: linear-gradient(45deg,
     hsl(239deg 92% 60%) 0%,
@@ -171,7 +237,7 @@ header{
     position: relative;
     display:flex;
     flex-direction: column;
-    margin-top: 400px;
+    margin-top: 300px;
     
 }
 
@@ -182,7 +248,7 @@ header{
     z-index: 1;
 }
 
-.img-section-2-container .img-replacer{
+/* .img-section-2-container .img-replacer{
     min-width: 300px;
     width: 70%;  
     text-align: center;
@@ -190,7 +256,7 @@ header{
 }
 .img-replacer img{
     width: inherit;
-}
+} */
 .section-2-tags-container{
     display: flex;
     flex-direction: row;
@@ -289,6 +355,41 @@ header{
     color: white;
     box-shadow: 0.1px 0.1px 3px #333;
 }
+
+/* @media(max-width:440px){
+    .section-2-tags-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin: 150px 0px;
+    }
+    .tag{
+        padding: 5px;
+        width: 80%;
+        margin: 5px;
+    }
+    .section-2 .section-2-demo-grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        row-gap: 5px;
+        margin: 10px 10px;
+    
+    }
+    .section-2 .demo {
+        width: 80%;
+        padding:3px;
+        margin:5px;
+        font-size: 1rem;
+    }
+
+    .demo img{
+        width: inherit;
+    }
+
+} */
 
 
 
@@ -547,6 +648,12 @@ h3{
     padding: 16px 32px;
   }
 
+  @media(max-width:440px){
+    .section-6{
+        margin-top:300px;
+    }
+  }
+
   /*Section 7 starts here*/
   .section-container.section-7{
     position: static;
@@ -604,6 +711,12 @@ h3{
   .components:hover{
     cursor:default;
     box-shadow: 0.1px 0.1px 1px #555;
+  }
+
+  @media(max-width:440px){
+    .section-7-container{
+        margin-top:550px;
+    }
   }
 
   /* Section 8 starts here */
@@ -756,6 +869,11 @@ h3{
     font-weight:700;
     font-size: 3.8rem;
 }
+@media(max-width:440px){
+    .section-8-div{
+        margin-top:500px;
+    }
+  }
 
 /* Section 9 starts */
 
@@ -843,6 +961,11 @@ h3{
     cursor: pointer;
     color: white;
 }
+@media(max-width:440px){
+    .sec-9-container{
+        margin-top:550px;
+    }
+  }
 
 /* Section 10 starts here */
 .section-container.section-10{
@@ -921,3 +1044,9 @@ footer .footer-para{
 .footer-para .heart{
     color:rgba(214, 17, 17, 0.904);
 }
+@media(max-width:440px){
+    .section-10{
+        margin-top:500px;
+        padding-bottom: 770px;
+    }
+  }

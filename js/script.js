@@ -1,11 +1,17 @@
 console.log("Running....");
 
-const toggleButton = document.getElementsByClassName('toggle-button')[0];
-const navbarLinks = document.getElementsByClassName('navbar-links')[0];
+const hamburger =   document.querySelector('.hamburger');
+const navbarList = document.querySelector('.navbar-list');
 
-toggleButton.addEventListener('click',()=>{
-    navbarLinks.classList.toggle('active');
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+    navbarList.classList.toggle("active"); 
 });
+
+document.querySelectorAll(".nav-item").forEach(n=>n.addEventListener("click",()=>{
+    hamburger.classList.remove("active");
+    navbarList.classList.remove("active");
+}))
 
 // $(document).ready(function(){
 //     $(window).scroll(function(){
