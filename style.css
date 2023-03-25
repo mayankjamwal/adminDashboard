@@ -190,6 +190,7 @@ header{
     font-size: 1.5rem;
     max-width: 50ch;
     line-height: 1.8rem;
+    font-family: 'Lato',Arial, Helvetica, sans-serif;
 }
 .btn-section-1 {
     display: flex;
@@ -451,6 +452,7 @@ p{
     grid-area: para;
     font-size: 1.3rem;
     line-height: 1.8rem;
+    font-family: 'Lato',Verdana, Geneva, Tahoma, sans-serif, Helvetica, sans-serif;
 }
 
 .grid-grp.one,.grid-grp.five,.grid-grp.nine{
