@@ -933,13 +933,13 @@ h3{
 /* Section 9 starts */
 
 .section-container.section-9{
-    margin-top: 400px;
+    margin-top: 200px;
     position: relative;
     z-index: 6;
     width: 100%;
 }
 .sec-9-container{
-    margin-top: 100px;
+    margin-top: 150px;
     display: flex;
     justify-content: center;
     align-items: flex-start;
@@ -1022,7 +1022,7 @@ h3{
 }
 @media(max-width:440px){
     .sec-9-container{
-        margin-top:550px;
+        margin-top:750px;
     }
   }
 
@@ -1096,7 +1096,7 @@ footer .footer-para{
 }
 @media(max-width:440px){
     .section-10{
-        margin-top:500px;
+        margin-top:700px;
         padding-bottom: 770px;
     }
   }
